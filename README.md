@@ -131,21 +131,37 @@ Automatic floor selection after QR scanning
 
 ## Project Structure
 QR-Based-Navigation-for-Visually-Impaired-Users/
+
 ├── main.py
+
 ├── routeGuide.py
+
 ├── qrReader.py
+
 ├── qrDetect.py
+
 ├── qrGenerate.py
+
 ├── nodes_map.json
+
 ├── current_position.json
+
 ├── requirements.txt
+
 ├── map/
+
 │   ├── ground_floor.png
+
 │   ├── first_floor.png
+
 │   └── map_editor.html
+
 ├── project_images/
+
 │   ├── Homepage_background.jpeg
+
 │   └── qr_codes_colored/
+
 └── qr_codes_colored/
 
 ## Main Files
