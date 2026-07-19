@@ -197,7 +197,7 @@ This project was developed for the UCCC2513 Mini Project by P9 Group 3 in June 2
 | Shak Yong Sim  | 2400233    |
 | Yap Ern Ru     | 2400070    |
 
-Acknowledgements
+**Acknowledgements**
 
 Developed as an academic mini project to explore QR positioning, computer vision, accessible interface design,
 voice interaction, and graph-based indoor navigation.
