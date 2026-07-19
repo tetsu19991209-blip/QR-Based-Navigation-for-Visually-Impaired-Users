@@ -19,12 +19,11 @@ def resolve_bg():
     1) Preferred path under OneDrive (file or first image file in that folder)
     2) Fallback: background_image.(jpeg|jpg|png) next to this script
     """
-    user_path = os.path.join
-    (
-        DIR,
-        "project_images",
-        "Homepage_background.jpeg"
-    )
+user_path = os.path.join(
+    DIR,
+    "project_images",
+    "Homepage_background.jpeg"
+)
     if os.path.exists(user_path):
         if os.path.isfile(user_path):
             return user_path
