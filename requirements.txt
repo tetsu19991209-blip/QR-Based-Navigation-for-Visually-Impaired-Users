@@ -1,0 +1,9 @@
+opencv-python
+numpy
+Pillow
+pyttsx3
+qrcode[pil]
+SpeechRecognition
+PyAudio
+pywin32
+ultralytics
