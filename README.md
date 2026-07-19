@@ -1,4 +1,4 @@
-】# QR-Based Indoor Navigation for Visually Impaired Users
+# QR-Based Indoor Navigation for Visually Impaired Users
 
 A Python-based indoor navigation prototype designed to assist people with visual impairments in navigating indoor environments. The system identifies the user's current location through QR codes, calculates an indoor route using the A* pathfinding algorithm, and provides visual and voice-guided navigation instructions.
 
