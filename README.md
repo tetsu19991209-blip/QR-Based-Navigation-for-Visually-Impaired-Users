@@ -43,6 +43,7 @@ This project uses QR codes installed at known indoor locations to determine the 
 The indoor navigation route is calculated using the A* search algorithm.
 
 Each location is represented as a node, while connections between locations are represented as graph edges. 
+
 The implementation uses Euclidean distance to estimate the cost of travelling between two nodes:
 
 
