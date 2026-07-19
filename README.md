@@ -60,7 +60,7 @@ An additional penalty is applied when transitioning between stairs on different 
 
 The calculated pixel distance may also be converted into an estimated number of walking steps.
 
-QR Positioning
+## QR Positioning
 
 Each generated QR code contains location information such as:
 
@@ -83,7 +83,7 @@ After a successful scan, the decoded information is written to current_position.
 
 The scanner also provides camera-positioning guidance, such as moving closer, centring the QR code, adjusting the camera direction, or holding the camera steady.
 
-Voice Guidance
+## Voice Guidance
 
 The system supports accessibility-focused voice interaction through:
 
@@ -107,7 +107,7 @@ Click-and-drag map panning
 Manual floor switching
 Automatic floor selection after QR scanning
 
-Technologies Used
+## Technologies Used
 | Technology         | Purpose                                              |
 | ------------------ | ---------------------------------------------------- |
 | Python             | Main programming language                            |
@@ -125,7 +125,7 @@ Technologies Used
 | YOLO / Ultralytics | Optional QR-region detection fallback                |
 | Threading          | Non-blocking speech and scanning operations          |
 
-Project Structure
+## Project Structure
 QR-Based-Navigation-for-Visually-Impaired-Users/
 ├── main.py
 ├── routeGuide.py
@@ -144,7 +144,7 @@ QR-Based-Navigation-for-Visually-Impaired-Users/
 │   └── qr_codes_colored/
 └── qr_codes_colored/
 
-Main Files
+## Main Files
 main.py — Main application interface and program launcher.
 qrReader.py — Reads QR codes through the webcam and updates the current position.
 routeGuide.py — Calculates routes, renders maps, and generates navigation instructions.
@@ -153,40 +153,39 @@ qrDetect.py — Experimental hybrid QR detection using image enhancement, OpenCV
 nodes_map.json — Stores indoor nodes, coordinates, floors, neighbours, and navigation actions.
 current_position.json — Stores the most recently scanned position.
 Installation
-1. Clone the repository
+
+**1. Clone the repository**
 git clone https://github.com/tetsu19991209-blip/QR-Based-Navigation-for-Visually-Impaired-Users.git
 cd QR-Based-Navigation-for-Visually-Impaired-Users
 
-2. Create a virtual environment
+**2. Create a virtual environment**
 python -m venv .venv
 Activate it on Windows:
 .venv\Scripts\activate
 
-3. Install the dependencies
+**3. Install the dependencies**
 pip install -r requirements.txt
 PyAudio installation may depend on the operating system and Python version.
 The current prototype is primarily designed for Windows because it uses pywin32 for speech-related functionality.
 
-Running the Application
-
+**Running the Application**
 Start the main application:
 python main.py
 
-From the main interface:
-
+**From the main interface:**
 Select Scan and Read QR code.
 Position the QR code in front of the webcam.
 Allow the scanner to identify the current location.
 Enter or speak a destination.
 Follow the displayed and spoken navigation instructions.
 
-To open the route guide directly:
+**To open the route guide directly:**
 python routeGuide.py
 
-To generate QR codes from nodes_map.json:
+**To generate QR codes from nodes_map.json:**
 python qrGenerate.py
 
-Team Members
+## Team Members
 
 This project was developed for the UCCC2513 Mini Project by P9 Group 3 in June 2025 Semester.
 
@@ -197,7 +196,7 @@ This project was developed for the UCCC2513 Mini Project by P9 Group 3 in June 2
 | Shak Yong Sim  | 2400233    |
 | Yap Ern Ru     | 2400070    |
 
-**Acknowledgements**
+## Acknowledgements
 
 Developed as an academic mini project to explore QR positioning, computer vision, accessible interface design,
 voice interaction, and graph-based indoor navigation.
