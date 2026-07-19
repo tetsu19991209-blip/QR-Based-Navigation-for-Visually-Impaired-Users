@@ -1,0 +1,16 @@
+{
+  "Node": "N008",
+  "Coordinate": {
+    "x": 1232,
+    "y": 487
+  },
+  "Neigbours": [
+    "PB ATM",
+    "NGT5"
+  ],
+  "Action": "Current Position",
+  "meta": {
+    "type": "lab_classroom",
+    "floor": 0
+  }
+}

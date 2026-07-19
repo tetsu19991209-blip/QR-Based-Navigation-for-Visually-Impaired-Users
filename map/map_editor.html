@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Indoor Map Editor v3 — Minimal (Add/Connect/Delete + Import + Export Original/FlipY)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Kill caching while you're testing -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  html,body{height:100%;margin:0;font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  #toolbar{display:flex;gap:8px;align-items:center;padding:8px 12px;background:#111;color:#eee}
+  #map{height:calc(100% - 48px)}
+  .mode{padding:6px 10px;border-radius:6px;border:1px solid #444;background:#1e1e1e;color:#eee;cursor:pointer}
+  .mode.active{background:#2a6;color:#fff;border-color:#2a6}
+  .leaflet-tooltip.my{background:rgba(0,0,0,.75);color:#fff;border:none;border-radius:8px;padding:6px 8px}
+  .panel{position:fixed;right:12px;top:56px;background:#fff;border:1px solid #ddd;border-radius:10px;padding:10px;width:340px;max-height:72vh;overflow:auto;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  .panel h3{margin:0 0 8px;font-size:15px}
+  .panel label{display:block;margin:8px 0 4px;font-weight:600}
+  .panel input,.panel select,.panel textarea{width:100%;padding:6px 8px;font:inherit;box-sizing:border-box}
+  .panel .row{display:flex;gap:8px}
+  .panel .row>*{flex:1}
+  .edge{pointer-events:none}
+  small.hint{opacity:.75}
+  table.nei{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+  table.nei th,table.nei td{border:1px solid #ddd;padding:3px 4px;text-align:left;vertical-align:middle}
+  table.nei th{background:#f6f6f6;position:sticky;top:0;z-index:1}
+  table.nei col.nei-dir{width:118px}
+  table.nei col.nei-min,table.nei col.nei-max{width:54px}
+  table.nei td.nei-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .nei select{width:100%;min-width:0;padding:3px 4px;font-size:12px}
+  .nei input[type=number]{width:100%;min-width:0;padding:2px 3px;font-size:12px;text-align:center;box-sizing:border-box;appearance:textfield}
+  .nei input[type=number]::-webkit-outer-spin-button,.nei input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+</style>
+</head>
+<body>
+  <div id="toolbar">
+    <label>Floor:
+      <select id="floorSel"><option value="0">Ground</option><option value="1" selected>First</option></select>
+    </label>
+    <button id="modeAdd" class="mode">Add node</button>
+    <button id="modeConnect" class="mode">Connect</button>
+    <button id="modeDelete" class="mode">Delete</button>
+    <button id="btnImport" class="mode">Import JSON</button>
+    <button id="btnExportOriginal" class="mode">Export JSON (Original)</button>
+    <button id="btnExportFlipY" class="mode">Export JSON (Flip-Y)</button>
+    <span id="status" style="margin-left:auto;opacity:.85"></span>
+  </div>
+  <div id="map" aria-label="Indoor map editor"></div>
+
+  <div id="editor" class="panel" hidden>
+    <h3>Edit node</h3>
+    <label>Node ID</label>
+    <input id="ed_id" placeholder="e.g., N001 / P001 / STAIR_G1" />
+    <div class="row">
+      <div>
+        <label>Type</label>
+        <select id="ed_type">
+          <option value="lab_classroom">lab_classroom</option>
+          <option value="lecturer_office">lecturer_office</option>
+          <option value="toilet">toilet</option>
+          <option value="stair">stair</option>
+          <option value="path">path</option>
+          <option value="FGO">FGO</option>
+          <option value="kiosk">kiosk</option>
+          <option value="canteen">canteen</option>
+          <option value="ATM">ATM</option>
+        </select>
+      </div>
+      <div>
+        <label>Floor</label>
+        <select id="ed_floor"><option value="0">0</option><option value="1">1</option></select>
+      </div>
+    </div>
+    <div class="row">
+      <div><label>X</label><input id="ed_x" type="number" /></div>
+      <div><label>Y</label><input id="ed_y" type="number" /></div>
+    </div>
+    <label>Default Action label</label>
+    <input id="ed_action_label" placeholder="current location" />
+    <label>Default Action TTS</label>
+    <textarea id="ed_action_tts" rows="2" placeholder="You are at N001"></textarea>
+    <div style="margin-top:10px">
+      <h3>Neighbor actions</h3>
+      <p class="hint" style="margin:0 0 8px">For each neighbor, set direction and step range. Allowed dir: straight / left / right / <b>back</b> / up / down.</p>
+      <div id="neiBox"></div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button id="ed_save">Save</button>
+      <button id="ed_close" style="margin-left:auto">Close</button>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// Build tag to verify refreshes
+console.log("Map Editor build: v3");
+
+// Floor backgrounds
+const FLOOR_META={0:{png:"ground_floor.png"},1:{png:"first_floor.png"}};
+
+// App state
+const LS_KEY="indoor_map_editor_autosave_mini_v3_en";
+const S={map:null,overlay:null,boundsByFloor:{},currentFloor:1,floorSize:{},floorKind:{},nodes:new Map(),markers:new Map(),edges:[],polylines:[],mode:null,pendingConnect:null};
+const $=id=>document.getElementById(id); const setStatus=msg=>$("status").textContent=msg||"";
+
+// Helpers
+const colorByType=t=>t==="lab_classroom"?"#1f6feb":t==="lecturer_office"?"#cc0000":t==="stair"?"#ff7f0e":t==="toilet"?"#1aa64a":t==="path"?"#666":"#ff4da6";
+const iconFor=n=>L.divIcon({html:`<div style="width:14px;height:14px;border-radius:50%;background:${colorByType(n.type)};border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)"></div>`,className:"",iconSize:[18,18],iconAnchor:[9,9]});
+const asKey=(a,b)=>[a,b].sort().join("::");
+const edgeExists=(a,b)=>S.edges.some(e=>asKey(e[0],e[1])===asKey(a,b));
+const uniqueId=id=>{let v=id.trim(),i=2;while(S.nodes.has(v))v=id+"_"+(i++);return v};
+
+// Autosave
+function saveAutosave(){try{localStorage.setItem(LS_KEY,JSON.stringify({version:5,nodes:[...S.nodes.values()]}));setStatus("Autosaved")}catch(e){setStatus("Autosave failed: "+e.message)}}
+function loadAutosave(){try{const raw=localStorage.getItem(LS_KEY);if(!raw)return false;const arr=(JSON.parse(raw).nodes)||[];S.nodes.clear();S.edges=[];const seen=new Set();for(const n of arr){n.neighbours=Array.isArray(n.neighbours)?n.neighbours:[];n.action=n.action||{label:"current location",tts:`You are at ${n.node}`};n.actions=n.actions||{};S.nodes.set(n.node,n)}for(const n of arr)for(const b of n.neighbours){const k=asKey(n.node,b);if(!seen.has(k)&&S.nodes.has(b)){S.edges.push([n.node,b]);seen.add(k)}};redrawAll();setStatus(`Recovered ${S.nodes.size} nodes from autosave`);return true}catch(e){setStatus("Autosave corrupted: "+e.message);return false}}
+
+// Floor meta & images
+function loadImage(url){return new Promise((res,rej)=>{const img=new Image();img.onload=()=>res(img);img.onerror=()=>rej(new Error("Image load failed: "+url));img.src=url+"?v="+Date.now()})}
+async function loadFloorMeta(f){if(S.boundsByFloor[f])return;let w=1000,h=800,kind="none";try{const img=await loadImage(FLOOR_META[f].png);w=img.naturalWidth||img.width;h=img.naturalHeight||img.height;kind="png"}catch{}S.floorKind[f]=kind;S.floorSize[f]={w,h};S.boundsByFloor[f]=[[0,0],[h,w]]}
+function loadFloor(f){S.currentFloor=f;const b=S.boundsByFloor[f];if(!b)return;S.map.setMaxBounds(b);S.map.fitBounds(b);if(S.overlay){S.map.removeLayer(S.overlay);S.overlay=null}if(S.floorKind[f]==="png"){S.overlay=L.imageOverlay(FLOOR_META[f].png+"?v="+Date.now(),b).addTo(S.map)}else{const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");const {w,h}=S.floorSize[f];svg.setAttribute("viewBox",`0 0 ${w} ${h}`);svg.innerHTML=`<rect x="0" y="0" width="${w}" height="${h}" fill="#f8f9fb"/>`;S.overlay=L.svgOverlay(svg,b).addTo(S.map)}redrawAll();S.map.invalidateSize()}
+
+// Draw
+function redrawAll(){redrawEdges();redrawMarkers()}
+function redrawMarkers(){for(const m of S.markers.values())m.remove();S.markers.clear();for(const [id,n] of S.nodes.entries()){if(n.coordinate.floor!==S.currentFloor)continue;const mk=L.marker([n.coordinate.y,n.coordinate.x],{icon:iconFor(n),draggable:true}).addTo(S.map);mk.bindTooltip(`${n.node}`,{permanent:false,direction:"top",className:"my",offset:[0,-8]});mk.on("drag",e=>{const ll=e.target.getLatLng();n.coordinate.x=ll.lng;n.coordinate.y=ll.lat;if(currentEditing===id)fillEditor(n);redrawEdges();saveAutosave()});mk.on("click",()=>onNodeClick(id));S.markers.set(id,mk)}}
+function redrawEdges(){S.polylines.forEach(pl=>pl.remove());S.polylines.length=0;for(const [a,b] of S.edges){const na=S.nodes.get(a),nb=S.nodes.get(b);if(!na||!nb)continue;if(na.coordinate.floor!==S.currentFloor||nb.coordinate.floor!==S.currentFloor)continue;S.polylines.push(L.polyline([[na.coordinate.y,na.coordinate.x],[nb.coordinate.y,nb.coordinate.x]],{color:"#888",weight:2.5,opacity:.95,className:"edge"}).addTo(S.map))}}
+
+// Modes & interactions
+function setMode(name){S.mode=name;["modeAdd","modeConnect","modeDelete"].forEach(id=>{$(id).classList.toggle("active",id.toLowerCase().includes(name||""))});S.pendingConnect=null;setStatus(name?`Mode: ${name}`:"")}
+function onMapClick(e){if(S.mode!=="add")return;const id=prompt("Node ID (e.g., N001 / P001 / STAIR_G1):");if(!id)return;const clean=uniqueId(id.trim());const type=prompt("Type [lab_classroom | lecturer_office | toilet | stair | path | FGO | kiosk | canteen | ATM]:","path")||"path";S.nodes.set(clean,{node:clean,type,coordinate:{floor:S.currentFloor,x:e.latlng.lng,y:e.latlng.lat},neighbours:[],action:{label:"current location",tts:`You are at ${clean}`},actions:{}});redrawAll();saveAutosave()}
+function onNodeClick(id){if(S.mode==="connect"){if(!S.pendingConnect){S.pendingConnect=id;setStatus(`Connect: pick another node to link with ${id}`)}else{if(S.pendingConnect===id){S.pendingConnect=null;setStatus("Connect cancelled");return}const a=S.pendingConnect,b=id;if(edgeExists(a,b)){S.edges=S.edges.filter(e=>asKey(e[0],e[1])!==asKey(a,b));const na=S.nodes.get(a),nb=S.nodes.get(b);na.neighbours=na.neighbours.filter(x=>x!==b);nb.neighbours=nb.neighbours.filter(x=>x!==a);if(na.actions)delete na.actions[b];if(nb.actions)delete nb.actions[a];setStatus(`Edge removed: ${a} — ${b}`)}else{S.edges.push([a,b]);const na=S.nodes.get(a),nb=S.nodes.get(b);if(!na.neighbours.includes(b))na.neighbours.push(b);if(!nb.neighbours.includes(a))nb.neighbours.push(a);setStatus(`Edge added: ${a} — ${b}`)}S.pendingConnect=null;redrawAll();saveAutosave()}return}
+  if(S.mode==="delete"){if(!confirm(`Delete node ${id}?`))return;S.edges=S.edges.filter(e=>e[0]!==id&&e[1]!==id);for(const v of S.nodes.values()){v.neighbours=v.neighbours.filter(x=>x!==id);if(v.actions)delete v.actions[id]}S.nodes.delete(id);redrawAll();saveAutosave();setStatus(`Deleted ${id}`);return}
+  openEditor(id)
+}
+
+// Editor
+let currentEditing=null;
+function neighborTable(n){const nei=(n.neighbours||[]).slice().sort();const rows=nei.map(nb=>{const a=(n.actions&&n.actions[nb])||{},dir=a.dir||"",s0=(a.steps&&a.steps[0]!=null)?a.steps[0]:"",s1=(a.steps&&a.steps[1]!=null)?a.steps[1]:"";return `<tr><td class="nei-name" title="${nb}">${nb}</td><td><select data-k="${nb}" data-f="dir"><option value=""></option><option value="straight"${dir==="straight"?" selected":""}>straight</option><option value="left"${dir==="left"?" selected":""}>left</option><option value="right"${dir==="right"?" selected":""}>right</option><option value="back"${dir==="back"?" selected":""}>back</option><option value="up"${dir==="up"?" selected":""}>up</option><option value="down"${dir==="down"?" selected":""}>down</option></select></td><td><input type="number" min="0" step="1" value="${s0}" data-k="${nb}" data-f="min"/></td><td><input type="number" min="0" step="1" value="${s1}" data-k="${nb}" data-f="max"/></td></tr>`}).join("");return `<table class="nei"><colgroup><col class="nei-name"><col class="nei-dir"><col class="nei-min"><col class="nei-max"></colgroup><thead><tr><th>Neighbor</th><th>Dir</th><th>Min</th><th>Max</th></tr></thead><tbody>${rows}</tbody></table><p class="hint" style="margin-top:6px">Leave empty = auto by geometry. If set, routeGuide prioritizes these actions.</p>`}
+function openEditor(id){const n=S.nodes.get(id);if(!n)return;currentEditing=id;fillEditor(n);$("editor").hidden=false}
+function fillEditor(n){ed_id.value=n.node;ed_type.value=n.type;ed_floor.value=String(n.coordinate.floor);ed_x.value=Math.round(n.coordinate.x);ed_y.value=Math.round(n.coordinate.y);ed_action_label.value=n.action?.label||"";ed_action_tts.value=n.action?.tts||"";n.actions=n.actions||{};$("neiBox").innerHTML=neighborTable(n)}
+function readNeighborActionsInto(n){const box=$("neiBox");if(!box)return;const els=box.querySelectorAll("select[data-k], input[data-k]");const tmp={};for(const el of els){const k=el.getAttribute("data-k"),f=el.getAttribute("data-f");tmp[k]=tmp[k]||{};if(el.tagName==="SELECT")tmp[k].dir=el.value||undefined;else{const v=el.value!==""?Number(el.value):undefined;if(f==="min")tmp[k].min=v;if(f==="max")tmp[k].max=v}}const out={};for(const [k,v] of Object.entries(tmp)){const steps=(Number.isFinite(v.min)||Number.isFinite(v.max))?[v.min||0,v.max||0]:undefined;if((v.dir&&v.dir.length)||steps){out[k]={dir:v.dir,steps};if(v.dir&&steps){const d=v.dir==="straight"?"go straight":v.dir==="back"?"go back":v.dir==="up"?"go upstairs":v.dir==="down"?"go downstairs":`turn ${v.dir}`;out[k].tts=`${d} and walk ${steps[0]}-${steps[1]} steps`}}}n.actions=out}
+function saveEditor(){const oldId=currentEditing;if(!oldId)return;const n=S.nodes.get(oldId);if(!n)return;readNeighborActionsInto(n);let newId=ed_id.value.trim();if(!newId){alert("Node ID required");return}if(newId!==oldId&&S.nodes.has(newId)){alert("Node ID exists");return}n.node=newId;n.type=ed_type.value;n.coordinate.floor=Number(ed_floor.value);n.coordinate.x=Number(ed_x.value);n.coordinate.y=Number(ed_y.value);n.action={label:ed_action_label.value||"current location",tts:ed_action_tts.value||`You are at ${newId}`};if(newId!==oldId){S.nodes.delete(oldId);S.nodes.set(newId,n);for(const v of S.nodes.values()){v.neighbours=v.neighbours.map(x=>x===oldId?newId:x);if(v.actions&&v.actions[oldId]){v.actions[newId]=v.actions[oldId];delete v.actions[oldId]}}S.edges=S.edges.map(([a,b])=>[a===oldId?newId:a,b===oldId?newId:b]);currentEditing=newId}redrawAll();saveAutosave();setStatus(`Saved ${newId}`)}
+function closeEditor(){currentEditing=null;$("editor").hidden=true}
+
+// Import / Export
+function importJSON(){const inp=document.createElement("input");inp.type="file";inp.accept=".json,application/json";inp.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const data=JSON.parse(r.result),arr=data.nodes||data||[];S.nodes.clear();S.edges=[];const seen=new Set();for(const n of arr){n.neighbours=Array.isArray(n.neighbours)?n.neighbours:[];n.action=n.action||{label:"current location",tts:`You are at ${n.node}`};n.actions=n.actions||{};S.nodes.set(n.node,n)}for(const n of arr)for(const b of n.neighbours){const k=asKey(n.node,b);if(!seen.has(k)&&S.nodes.has(b)){S.edges.push([n.node,b]);seen.add(k)}}redrawAll();saveAutosave();setStatus(`Imported ${S.nodes.size} nodes`)}catch(err){alert("Invalid JSON: "+err.message)}};r.readAsText(f)};inp.click()}
+function downloadJSON(obj,filename){const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=filename;a.click();URL.revokeObjectURL(a.href)}
+function exportJSONOriginal(){try{const nodes=[...S.nodes.values()].map(n=>({node:n.node,type:n.type,coordinate:{floor:n.coordinate.floor,x:n.coordinate.x,y:n.coordinate.y},neighbours:(n.neighbours||[]).slice(),action:n.action?{label:n.action.label,tts:n.action.tts}:undefined,actions:n.actions||{}}));downloadJSON({version:5,nodes},"nodes_map_original.json");setStatus("Exported nodes_map_original.json (Original)")}catch(e){setStatus("Export Original failed: "+e.message)}}
+function exportJSONFlipY(){try{const sizes={};for(const fid of [0,1]){const s=S.floorSize[fid];if(s)sizes[String(fid)]={width:s.w,height:s.h}}const nodes=[...S.nodes.values()].map(n=>{const fid=n.coordinate.floor,H=(S.floorSize[fid]?.h)||0;return{node:n.node,type:n.type,coordinate:{floor:fid,x:n.coordinate.x,y:H?H-n.coordinate.y:n.coordinate.y},neighbours:(n.neighbours||[]).slice(),action:n.action?{label:n.action.label,tts:n.action.tts}:undefined,actions:n.actions||{}}});downloadJSON({version:5,floor_sizes:sizes,nodes},"nodes_map.json");setStatus("Exported nodes_map.json (Flip-Y)")}catch(e){setStatus("Export Flip-Y failed: "+e.message)}}
+
+// Boot
+async function boot(){S.map=L.map("map",{crs:L.CRS.Simple,minZoom:-2,maxZoom:4,zoomControl:true});await Promise.all([loadFloorMeta(0),loadFloorMeta(1)]);loadFloor(S.currentFloor);S.map.on("click",onMapClick);$("floorSel").onchange=e=>loadFloor(Number(e.target.value));$("modeAdd").onclick=()=>setMode("add");$("modeConnect").onclick=()=>setMode("connect");$("modeDelete").onclick=()=>setMode("delete");$("btnImport").onclick=importJSON;$("btnExportOriginal").onclick=exportJSONOriginal;$("btnExportFlipY").onclick=exportJSONFlipY;ed_save.onclick=saveEditor;ed_close.onclick=closeEditor;if(!loadAutosave())setStatus("Ready. Choose a mode.")}
+boot().catch(err=>setStatus("Failed to init: "+err.message));
+</script>
+</body>
+</html>

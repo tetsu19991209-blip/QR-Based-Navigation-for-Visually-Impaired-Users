@@ -1,0 +1,6108 @@
+{
+  "version": 5,
+  "floor_sizes": {
+    "0": {
+      "width": 3471,
+      "height": 751
+    },
+    "1": {
+      "width": 3471,
+      "height": 753
+    }
+  },
+  "nodes": [
+    {
+      "node": "N101",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 3234,
+        "y": 295
+      },
+      "neighbours": [
+        "N102",
+        "P003"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N101"
+      },
+      "actions": {
+        "N102": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        },
+        "P003": {
+          "dir": "right",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn right and walk 5-7 steps"
+        }
+      }
+    },
+    {
+      "node": "N102",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 2940,
+        "y": 265
+      },
+      "neighbours": [
+        "N101",
+        "N103"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N102"
+      },
+      "actions": {
+        "N101": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "N103": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N103",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 2674,
+        "y": 243
+      },
+      "neighbours": [
+        "N102",
+        "stair1_ff"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N103"
+      },
+      "actions": {
+        "N102": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "stair1_ff": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N104",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 2166,
+        "y": 260.99814574595246
+      },
+      "neighbours": [
+        "N105",
+        "stair1_ff"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N104"
+      },
+      "actions": {
+        "N105": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        },
+        "stair1_ff": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N105",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 1890,
+        "y": 286.99752766126994
+      },
+      "neighbours": [
+        "N104",
+        "N106"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N105"
+      },
+      "actions": {
+        "N104": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "N106": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N106",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 1622,
+        "y": 308.99814574595246
+      },
+      "neighbours": [
+        "N105",
+        "N107"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N106"
+      },
+      "actions": {
+        "N105": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "N107": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N107",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 1346,
+        "y": 334.00154521170623
+      },
+      "neighbours": [
+        "N106",
+        "P002"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N107"
+      },
+      "actions": {
+        "N106": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "P002": {
+          "dir": "left",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn left and walk 5-7 steps"
+        }
+      }
+    },
+    {
+      "node": "N108",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 1202,
+        "y": 493.9984547882937
+      },
+      "neighbours": [
+        "NFT5",
+        "P002"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N108"
+      },
+      "actions": {
+        "NFT5": {
+          "dir": "left",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn left and walk 18-23 steps"
+        },
+        "P002": {
+          "dir": "back",
+          "steps": [
+            9,
+            12
+          ],
+          "tts": "go back and walk 9-12 steps"
+        }
+      }
+    },
+    {
+      "node": "N109",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 1738,
+        "y": 492.99814574595246
+      },
+      "neighbours": [
+        "N110",
+        "NFT3"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N109"
+      },
+      "actions": {
+        "N110": {
+          "dir": "left",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn left and walk 18-23 steps"
+        },
+        "NFT3": {
+          "dir": "right",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn right and walk 5-7 steps"
+        }
+      }
+    },
+    {
+      "node": "N110",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 2090,
+        "y": 489
+      },
+      "neighbours": [
+        "N109",
+        "P001"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N110"
+      },
+      "actions": {
+        "N109": {
+          "dir": "right",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn right and walk 18-23 steps"
+        },
+        "P001": {
+          "dir": "left",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn left and walk 18-23 steps"
+        }
+      }
+    },
+    {
+      "node": "N111",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 2554,
+        "y": 487
+      },
+      "neighbours": [
+        "N112",
+        "P001"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N111"
+      },
+      "actions": {
+        "N112": {
+          "dir": "left",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn left and walk 18-23 steps"
+        },
+        "P001": {
+          "dir": "right",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn right and walk 5-7 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT2",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 3238,
+        "y": 493
+      },
+      "neighbours": [
+        "N112",
+        "NFT1"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT2"
+      },
+      "actions": {
+        "N112": {
+          "dir": "right",
+          "steps": [
+            20,
+            25
+          ],
+          "tts": "turn right and walk 20-25 steps"
+        },
+        "NFT1": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT1",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 3320,
+        "y": 491
+      },
+      "neighbours": [
+        "NFT2",
+        "stair2_ff"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT1"
+      },
+      "actions": {
+        "NFT2": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "stair2_ff": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT3",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 1641,
+        "y": 493.99783670361126
+      },
+      "neighbours": [
+        "N109",
+        "NFT4"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT3"
+      },
+      "actions": {
+        "N109": {
+          "dir": "left",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn left and walk 5-7 steps"
+        },
+        "NFT4": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT4",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 1593,
+        "y": 494.99814574595246
+      },
+      "neighbours": [
+        "NFT3",
+        "NFT5"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT4"
+      },
+      "actions": {
+        "NFT3": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NFT5": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT5",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 1540,
+        "y": 494.99752766127
+      },
+      "neighbours": [
+        "NFT4",
+        "N108"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT5"
+      },
+      "actions": {
+        "N108": {
+          "dir": "right",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn right and walk 18-23 steps"
+        },
+        "NFT4": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT6",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 249,
+        "y": 182
+      },
+      "neighbours": [
+        "NFT7",
+        "P007",
+        "FGO",
+        "NF013"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT6"
+      },
+      "actions": {
+        "NF013": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NFT7": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "P007": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "FGO": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NFT7",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 1,
+        "x": 249,
+        "y": 259
+      },
+      "neighbours": [
+        "NFT6",
+        "P006",
+        "FGO"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NFT7"
+      },
+      "actions": {
+        "NFT6": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "P006": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "FGO": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "P001",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 2432,
+        "y": 485
+      },
+      "neighbours": [
+        "stair1_ff",
+        "N111",
+        "N110"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of N110 and N111."
+      },
+      "actions": {
+        "N110": {
+          "steps": [
+            18,
+            23
+          ]
+        },
+        "N111": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "stair1_ff": {
+          "steps": [
+            12,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "node": "N112",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 1,
+        "x": 2924,
+        "y": 487
+      },
+      "neighbours": [
+        "N111",
+        "NFT2"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at lab_classroom"
+      },
+      "actions": {
+        "N111": {
+          "dir": "right",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn right and walk 18-23 steps"
+        },
+        "NFT2": {
+          "dir": "left",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn left and walk 18-23 steps"
+        }
+      }
+    },
+    {
+      "node": "P002",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 1198,
+        "y": 333
+      },
+      "neighbours": [
+        "NF001",
+        "N107",
+        "stair3_ff",
+        "N108"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of stair3, N107, N108 and NF01."
+      },
+      "actions": {
+        "N107": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "N108": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "NF001": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "stair3_ff": {
+          "steps": [
+            5,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "node": "NF001",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 1189,
+        "y": 165
+      },
+      "neighbours": [
+        "P002"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of N001"
+      },
+      "actions": {
+        "P002": {
+          "dir": "right",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn right and walk 5-7 steps"
+        }
+      }
+    },
+    {
+      "node": "P003",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 3396,
+        "y": 325
+      },
+      "neighbours": [
+        "N101",
+        "stair2_ff"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of N001"
+      },
+      "actions": {
+        "N101": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "stair2_ff": {
+          "steps": [
+            5,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "node": "P004",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 1089,
+        "y": 180
+      },
+      "neighbours": [
+        "stair3_ff",
+        "NF002"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NF002"
+      },
+      "actions": {
+        "NF002": {
+          "steps": [
+            3,
+            5
+          ]
+        },
+        "stair3_ff": {
+          "steps": [
+            7,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "node": "P005",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 1085,
+        "y": 465
+      },
+      "neighbours": [
+        "stair3_ff",
+        "NF034"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NF034"
+      },
+      "actions": {
+        "NF034": {
+          "steps": [
+            3,
+            5
+          ]
+        },
+        "stair3_ff": {
+          "steps": [
+            5,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "node": "NF002",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 1061,
+        "y": 132
+      },
+      "neighbours": [
+        "P004",
+        "NF003"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF002"
+      },
+      "actions": {
+        "NF003": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "P004": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF003",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 1018,
+        "y": 132
+      },
+      "neighbours": [
+        "NF002",
+        "NF004"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF003"
+      },
+      "actions": {
+        "NF002": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF004": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF004",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 918,
+        "y": 133
+      },
+      "neighbours": [
+        "NF003",
+        "NF005",
+        "NF014"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF004"
+      },
+      "actions": {
+        "NF003": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF005": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF014": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF005",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 879,
+        "y": 133
+      },
+      "neighbours": [
+        "NF004",
+        "NF006",
+        "NF015"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF005"
+      },
+      "actions": {
+        "NF004": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF006": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF015": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF006",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 779,
+        "y": 133
+      },
+      "neighbours": [
+        "NF005",
+        "NF007",
+        "NF016"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF006"
+      },
+      "actions": {
+        "NF005": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF007": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF016": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF007",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 741,
+        "y": 134
+      },
+      "neighbours": [
+        "NF006",
+        "NF008",
+        "NF017"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF007"
+      },
+      "actions": {
+        "NF006": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF008": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF017": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF008",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 638,
+        "y": 134
+      },
+      "neighbours": [
+        "NF007",
+        "NF009",
+        "NF018"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF008"
+      },
+      "actions": {
+        "NF007": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF009": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF018": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF009",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 507,
+        "y": 132
+      },
+      "neighbours": [
+        "NF008",
+        "NF010",
+        "NF020"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF009"
+      },
+      "actions": {
+        "NF008": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF010": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF020": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF010",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 461,
+        "y": 133
+      },
+      "neighbours": [
+        "NF009",
+        "NF011",
+        "NF021"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF010"
+      },
+      "actions": {
+        "NF009": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF011": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF021": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF011",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 365,
+        "y": 134
+      },
+      "neighbours": [
+        "NF010",
+        "NF012"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF011"
+      },
+      "actions": {
+        "NF010": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF012": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF012",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 322,
+        "y": 133
+      },
+      "neighbours": [
+        "NF011",
+        "NF013"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF012"
+      },
+      "actions": {
+        "NF011": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF013": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF013",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 228,
+        "y": 134
+      },
+      "neighbours": [
+        "NF012",
+        "FGO",
+        "NFT6"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF013"
+      },
+      "actions": {
+        "NF012": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NFT6": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "FGO": {
+          "dir": "back",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "go back and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "NF021",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 426,
+        "y": 159
+      },
+      "neighbours": [
+        "NF020",
+        "P007",
+        "NF010"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF021"
+      },
+      "actions": {
+        "NF010": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF020": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "P007": {
+          "dir": "right",
+          "steps": [
+            10,
+            12
+          ],
+          "tts": "turn right and walk 10-12 steps"
+        }
+      }
+    },
+    {
+      "node": "NF020",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 533,
+        "y": 160
+      },
+      "neighbours": [
+        "NF019",
+        "NF021",
+        "NF009"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF020"
+      },
+      "actions": {
+        "NF009": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF019": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF021": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF019",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 568,
+        "y": 160
+      },
+      "neighbours": [
+        "NF018",
+        "NF020"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF019"
+      },
+      "actions": {
+        "NF018": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF020": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF018",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 669,
+        "y": 160
+      },
+      "neighbours": [
+        "NF017",
+        "NF019",
+        "NF008"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF018"
+      },
+      "actions": {
+        "NF008": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF017": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF019": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF017",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 706,
+        "y": 160
+      },
+      "neighbours": [
+        "NF016",
+        "NF018",
+        "NF007"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF017"
+      },
+      "actions": {
+        "NF007": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF016": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF018": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF016",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 813,
+        "y": 161
+      },
+      "neighbours": [
+        "NF015",
+        "NF017",
+        "NF006"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF016"
+      },
+      "actions": {
+        "NF006": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF015": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF017": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF015",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 861,
+        "y": 160
+      },
+      "neighbours": [
+        "NF014",
+        "NF016",
+        "NF005"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF015"
+      },
+      "actions": {
+        "NF005": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF014": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF016": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF014",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 954,
+        "y": 160.00092712702372
+      },
+      "neighbours": [
+        "NF004",
+        "NF015"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF014"
+      },
+      "actions": {
+        "NF004": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF015": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF035",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 945,
+        "y": 498
+      },
+      "neighbours": [
+        "NF032",
+        "NF036"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF035"
+      },
+      "actions": {
+        "NF032": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF036": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF036",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 837,
+        "y": 503
+      },
+      "neighbours": [
+        "NF037",
+        "NF035",
+        "NF031"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF036"
+      },
+      "actions": {
+        "NF031": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF035": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF037": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF037",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 795,
+        "y": 506
+      },
+      "neighbours": [
+        "NF038",
+        "NF036",
+        "NF030"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF037"
+      },
+      "actions": {
+        "NF030": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF036": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF038": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF038",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 704,
+        "y": 511
+      },
+      "neighbours": [
+        "NF039",
+        "NF037",
+        "NF029"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF038"
+      },
+      "actions": {
+        "NF029": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF037": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF039": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF039",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 661,
+        "y": 523
+      },
+      "neighbours": [
+        "NF040",
+        "NF038",
+        "NF028"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF039"
+      },
+      "actions": {
+        "NF028": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF038": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF040": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF040",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 565,
+        "y": 528
+      },
+      "neighbours": [
+        "NF041",
+        "NF039"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF040"
+      },
+      "actions": {
+        "NF039": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF041": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF041",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 516,
+        "y": 532
+      },
+      "neighbours": [
+        "NF042",
+        "NF040",
+        "NF027"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF041"
+      },
+      "actions": {
+        "NF027": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF040": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF042": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF042",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 426,
+        "y": 535
+      },
+      "neighbours": [
+        "NF026",
+        "NF041"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF042"
+      },
+      "actions": {
+        "NF026": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NF041": {
+          "dir": "right",
+          "steps": [
+            5,
+            0
+          ],
+          "tts": "turn right and walk 5-0 steps"
+        }
+      }
+    },
+    {
+      "node": "NF034",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 1055,
+        "y": 515
+      },
+      "neighbours": [
+        "P005",
+        "NF033"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF034"
+      },
+      "actions": {
+        "NF033": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "P005": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF033",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 1010,
+        "y": 520
+      },
+      "neighbours": [
+        "NF032",
+        "NF034"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF033"
+      },
+      "actions": {
+        "NF032": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF034": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF032",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 913,
+        "y": 528
+      },
+      "neighbours": [
+        "NF031",
+        "NF033",
+        "NF035"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF032"
+      },
+      "actions": {
+        "NF031": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF033": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF035": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF031",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 866,
+        "y": 533
+      },
+      "neighbours": [
+        "NF030",
+        "NF032",
+        "NF036"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF031"
+      },
+      "actions": {
+        "NF030": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF032": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF036": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF030",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 770,
+        "y": 539
+      },
+      "neighbours": [
+        "NF029",
+        "NF031",
+        "NF037"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF030"
+      },
+      "actions": {
+        "NF029": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF031": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF037": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF029",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 726,
+        "y": 542
+      },
+      "neighbours": [
+        "NF028",
+        "NF030",
+        "NF038"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF029"
+      },
+      "actions": {
+        "NF028": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF030": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF038": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF028",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 631,
+        "y": 549
+      },
+      "neighbours": [
+        "NF027",
+        "NF029",
+        "NF039"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF028"
+      },
+      "actions": {
+        "NF027": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF029": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF039": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF027",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 508,
+        "y": 563
+      },
+      "neighbours": [
+        "NF026",
+        "NF028",
+        "NF041"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF027"
+      },
+      "actions": {
+        "NF026": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF028": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NF041": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF026",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 463,
+        "y": 567
+      },
+      "neighbours": [
+        "NF025",
+        "NF027",
+        "NF042"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF026"
+      },
+      "actions": {
+        "NF025": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NF027": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NF042": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF025",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 361,
+        "y": 571
+      },
+      "neighbours": [
+        "NF024",
+        "NF026"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF025"
+      },
+      "actions": {
+        "NF024": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NF026": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NF024",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 305,
+        "y": 574
+      },
+      "neighbours": [
+        "NF023",
+        "NF025"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF024"
+      },
+      "actions": {
+        "NF023": {
+          "dir": "right",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "turn right and walk 5-7 steps"
+        },
+        "NF025": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NF023",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 1,
+        "x": 241,
+        "y": 542
+      },
+      "neighbours": [
+        "FGO",
+        "NF024",
+        "P006"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF023"
+      },
+      "actions": {
+        "NF024": {
+          "dir": "back",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "go back and walk 5-7 steps"
+        },
+        "P006": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "FGO": {
+          "dir": "right",
+          "steps": [
+            10,
+            12
+          ],
+          "tts": "turn right and walk 10-12 steps"
+        }
+      }
+    },
+    {
+      "node": "P006",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 249,
+        "y": 382
+      },
+      "neighbours": [
+        "NFT7",
+        "stair4_ff",
+        "NF023"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of FGO"
+      },
+      "actions": {
+        "NF023": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "NFT7": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "stair4_ff": {
+          "steps": [
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "node": "P007",
+      "type": "path",
+      "coordinate": {
+        "floor": 1,
+        "x": 247,
+        "y": 153
+      },
+      "neighbours": [
+        "NF021",
+        "NFT6"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NF013 and NFT6"
+      },
+      "actions": {
+        "NF021": {
+          "steps": [
+            10,
+            12
+          ]
+        },
+        "NFT6": {
+          "steps": [
+            3,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "node": "N001",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 3208,
+        "y": 295
+      },
+      "neighbours": [
+        "N002",
+        "P008"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N001"
+      },
+      "actions": {
+        "N002": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        },
+        "P008": {
+          "dir": "right",
+          "steps": [
+            8,
+            10
+          ],
+          "tts": "turn right and walk 8-10 steps"
+        }
+      }
+    },
+    {
+      "node": "N002",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 2912,
+        "y": 267
+      },
+      "neighbours": [
+        "N001",
+        "N003"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N002"
+      },
+      "actions": {
+        "N001": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "N003": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N003",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 2640,
+        "y": 245
+      },
+      "neighbours": [
+        "N002",
+        "P009"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N003"
+      },
+      "actions": {
+        "N002": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "P009": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "The Olive",
+      "type": "canteen",
+      "coordinate": {
+        "floor": 0,
+        "x": 2498,
+        "y": 359.9969095765875
+      },
+      "neighbours": [
+        "P009",
+        "P011"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at The Olive"
+      },
+      "actions": {}
+    },
+    {
+      "node": "PANAS",
+      "type": "kiosk",
+      "coordinate": {
+        "floor": 0,
+        "x": 2508,
+        "y": 106
+      },
+      "neighbours": [
+        "P009"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at PANAS"
+      },
+      "actions": {
+        "P009": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "stair1_gf",
+      "type": "stair",
+      "coordinate": {
+        "floor": 0,
+        "x": 2402,
+        "y": 199
+      },
+      "neighbours": [
+        "P009",
+        "P010"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair1_2"
+      },
+      "actions": {
+        "P009": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "P010": {
+          "steps": [
+            3,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "node": "stair1_ff",
+      "type": "stair",
+      "coordinate": {
+        "floor": 1,
+        "x": 2432,
+        "y": 223
+      },
+      "neighbours": [
+        "N103",
+        "N104",
+        "P001"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair1"
+      },
+      "actions": {
+        "N103": {
+          "steps": [
+            12,
+            15
+          ]
+        },
+        "N104": {
+          "steps": [
+            17,
+            20
+          ]
+        },
+        "P001": {
+          "steps": [
+            12,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "node": "stair2_ff",
+      "type": "stair",
+      "coordinate": {
+        "floor": 1,
+        "x": 3412,
+        "y": 491
+      },
+      "neighbours": [
+        "NFT1",
+        "P003"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair2"
+      },
+      "actions": {
+        "NFT1": {
+          "steps": [
+            3,
+            5
+          ]
+        },
+        "P003": {
+          "steps": [
+            5,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "node": "stair3_ff",
+      "type": "stair",
+      "coordinate": {
+        "floor": 1,
+        "x": 1083,
+        "y": 323
+      },
+      "neighbours": [
+        "P002",
+        "P004",
+        "P005"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair3"
+      },
+      "actions": {
+        "P002": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "P004": {
+          "steps": [
+            7,
+            10
+          ]
+        },
+        "P005": {
+          "steps": [
+            7,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "node": "stair4_ff",
+      "type": "stair",
+      "coordinate": {
+        "floor": 1,
+        "x": 336,
+        "y": 375
+      },
+      "neighbours": [
+        "P006"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair4"
+      },
+      "actions": {
+        "P006": {
+          "dir": "straight",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "go straight and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "N004",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 2160,
+        "y": 263
+      },
+      "neighbours": [
+        "P010",
+        "N005"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N004"
+      },
+      "actions": {
+        "N005": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        },
+        "P010": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N005",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 1882,
+        "y": 287
+      },
+      "neighbours": [
+        "N004",
+        "N006"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N005"
+      },
+      "actions": {
+        "N004": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "N006": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N006",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 1612,
+        "y": 309
+      },
+      "neighbours": [
+        "N005",
+        "N007"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N006"
+      },
+      "actions": {
+        "N005": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "N007": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "N007",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 1354,
+        "y": 335
+      },
+      "neighbours": [
+        "N006",
+        "PB ATM"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N007"
+      },
+      "actions": {
+        "N006": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "PB ATM": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "PB ATM",
+      "type": "ATM",
+      "coordinate": {
+        "floor": 0,
+        "x": 1245,
+        "y": 341
+      },
+      "neighbours": [
+        "N007",
+        "N008",
+        "stair3_gf"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at PB ATM"
+      },
+      "actions": {
+        "N007": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "N008": {
+          "dir": "back",
+          "steps": [
+            8,
+            10
+          ],
+          "tts": "go back and walk 8-10 steps"
+        },
+        "stair3_gf": {
+          "dir": "left",
+          "steps": [
+            8,
+            12
+          ],
+          "tts": "turn left and walk 8-12 steps"
+        }
+      }
+    },
+    {
+      "node": "N008",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 1232,
+        "y": 487
+      },
+      "neighbours": [
+        "PB ATM",
+        "NGT5"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N008"
+      },
+      "actions": {
+        "NGT5": {
+          "dir": "left",
+          "steps": [
+            17,
+            20
+          ],
+          "tts": "turn left and walk 17-20 steps"
+        },
+        "PB ATM": {
+          "dir": "back",
+          "steps": [
+            10,
+            12
+          ],
+          "tts": "go back and walk 10-12 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT5",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 1534,
+        "y": 487
+      },
+      "neighbours": [
+        "N008",
+        "NGT4"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT5"
+      },
+      "actions": {
+        "N008": {
+          "dir": "right",
+          "steps": [
+            17,
+            20
+          ],
+          "tts": "turn right and walk 17-20 steps"
+        },
+        "NGT4": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT4",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 1593,
+        "y": 488
+      },
+      "neighbours": [
+        "NGT5",
+        "NGT3"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT4"
+      },
+      "actions": {
+        "NGT3": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NGT5": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT3",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 1639,
+        "y": 489
+      },
+      "neighbours": [
+        "NGT4",
+        "N009"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT3"
+      },
+      "actions": {
+        "N009": {
+          "dir": "left",
+          "steps": [
+            8,
+            12
+          ],
+          "tts": "turn left and walk 8-12 steps"
+        },
+        "NGT4": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "N009",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 1753,
+        "y": 489
+      },
+      "neighbours": [
+        "NGT3",
+        "N010"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N009"
+      },
+      "actions": {
+        "N010": {
+          "dir": "left",
+          "steps": [
+            15,
+            18
+          ],
+          "tts": "turn left and walk 15-18 steps"
+        },
+        "NGT3": {
+          "dir": "right",
+          "steps": [
+            8,
+            12
+          ],
+          "tts": "turn right and walk 8-12 steps"
+        }
+      }
+    },
+    {
+      "node": "N010",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 2069,
+        "y": 489
+      },
+      "neighbours": [
+        "N009",
+        "N011"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N010"
+      },
+      "actions": {
+        "N009": {
+          "dir": "right",
+          "steps": [
+            15,
+            18
+          ],
+          "tts": "turn right and walk 15-18 steps"
+        },
+        "N011": {
+          "dir": "left",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn left and walk 18-23 steps"
+        }
+      }
+    },
+    {
+      "node": "N011",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 2494,
+        "y": 491
+      },
+      "neighbours": [
+        "N010",
+        "N012",
+        "P011"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N011"
+      },
+      "actions": {
+        "N010": {
+          "dir": "right",
+          "steps": [
+            18,
+            23
+          ],
+          "tts": "turn right and walk 18-23 steps"
+        },
+        "N012": {
+          "dir": "left",
+          "steps": [
+            15,
+            18
+          ],
+          "tts": "turn left and walk 15-18 steps"
+        },
+        "P011": {
+          "dir": "back",
+          "steps": [
+            5,
+            7
+          ],
+          "tts": "go back and walk 5-7 steps"
+        }
+      }
+    },
+    {
+      "node": "N012",
+      "type": "lab_classroom",
+      "coordinate": {
+        "floor": 0,
+        "x": 2872,
+        "y": 487
+      },
+      "neighbours": [
+        "N011",
+        "NGT2"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at N012"
+      },
+      "actions": {
+        "N011": {
+          "dir": "right",
+          "steps": [
+            15,
+            18
+          ],
+          "tts": "turn right and walk 15-18 steps"
+        },
+        "NGT2": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT2",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 3206,
+        "y": 489
+      },
+      "neighbours": [
+        "N012",
+        "NGT1"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT2"
+      },
+      "actions": {
+        "N012": {
+          "dir": "right",
+          "steps": [
+            15,
+            18
+          ],
+          "tts": "turn right and walk 15-18 steps"
+        },
+        "NGT1": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT1",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 3286,
+        "y": 491
+      },
+      "neighbours": [
+        "NGT2",
+        "stair2_gf"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT1"
+      },
+      "actions": {
+        "NGT2": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "stair2_gf": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "stair2_gf",
+      "type": "stair",
+      "coordinate": {
+        "floor": 0,
+        "x": 3378,
+        "y": 493
+      },
+      "neighbours": [
+        "NGT1",
+        "P008"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair2_gf"
+      },
+      "actions": {
+        "NGT1": {
+          "steps": [
+            3,
+            5
+          ]
+        },
+        "P008": {
+          "steps": [
+            12,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "node": "P008",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 3374,
+        "y": 335
+      },
+      "neighbours": [
+        "stair2_gf",
+        "N001"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of N001"
+      },
+      "actions": {
+        "N001": {
+          "steps": [
+            12,
+            15
+          ]
+        },
+        "stair2_gf": {
+          "steps": [
+            12,
+            15
+          ]
+        }
+      }
+    },
+    {
+      "node": "P009",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 2500,
+        "y": 225
+      },
+      "neighbours": [
+        "N003",
+        "The Olive",
+        "PANAS",
+        "stair1_gf"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of stair1, PANAS, The Olive and N003"
+      },
+      "actions": {
+        "N003": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "PANAS": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "The Olive": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "stair1_gf": {
+          "steps": [
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "node": "NG001",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 1091,
+        "y": 145
+      },
+      "neighbours": [
+        "stair3_gf",
+        "P012",
+        "NG002"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG001"
+      },
+      "actions": {
+        "NG002": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "P012": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "stair3_gf": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG002",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 995,
+        "y": 142
+      },
+      "neighbours": [
+        "NG003",
+        "NG001"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG002"
+      },
+      "actions": {
+        "NG001": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG003": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG003",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 951,
+        "y": 141
+      },
+      "neighbours": [
+        "NG004",
+        "NG002",
+        "NG015"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG003"
+      },
+      "actions": {
+        "NG002": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG004": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG015": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG004",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 857,
+        "y": 139
+      },
+      "neighbours": [
+        "NG005",
+        "NG003",
+        "NG016"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG004"
+      },
+      "actions": {
+        "NG003": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG005": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG016": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG005",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 807,
+        "y": 139
+      },
+      "neighbours": [
+        "NG006",
+        "NG004",
+        "NG017"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG005"
+      },
+      "actions": {
+        "NG004": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG006": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG017": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG006",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 716,
+        "y": 140
+      },
+      "neighbours": [
+        "NG007",
+        "NG005",
+        "NG018"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG006"
+      },
+      "actions": {
+        "NG005": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG007": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG018": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG007",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 671,
+        "y": 140
+      },
+      "neighbours": [
+        "NG008",
+        "NG006",
+        "NG019"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG007"
+      },
+      "actions": {
+        "NG006": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG008": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG019": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG008",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 559,
+        "y": 139
+      },
+      "neighbours": [
+        "NG009",
+        "NG007",
+        "NG021"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG008"
+      },
+      "actions": {
+        "NG007": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG009": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG021": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG009",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 455,
+        "y": 138
+      },
+      "neighbours": [
+        "NG010",
+        "NG008",
+        "NG022"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG009"
+      },
+      "actions": {
+        "NG008": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG010": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG022": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG010",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 417,
+        "y": 138
+      },
+      "neighbours": [
+        "NG011",
+        "NG009"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG010"
+      },
+      "actions": {
+        "NG009": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG011": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG011",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 317,
+        "y": 140
+      },
+      "neighbours": [
+        "NG012",
+        "NG010"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG011"
+      },
+      "actions": {
+        "NG010": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG012": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG012",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 271,
+        "y": 138
+      },
+      "neighbours": [
+        "NG013",
+        "NG011",
+        "P014"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG012"
+      },
+      "actions": {
+        "NG011": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG013": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "P014": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG013",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 180,
+        "y": 139
+      },
+      "neighbours": [
+        "NG014",
+        "NG012",
+        "NG023"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG013"
+      },
+      "actions": {
+        "NG012": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG014": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG023": {
+          "dir": "back",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "go back and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG014",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 139,
+        "y": 138.00061808468251
+      },
+      "neighbours": [
+        "NG024",
+        "NG013"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG014"
+      },
+      "actions": {
+        "NG013": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG024": {
+          "dir": "back",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "go back and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG022",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 489,
+        "y": 161
+      },
+      "neighbours": [
+        "NG021",
+        "P014",
+        "NG009"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG022"
+      },
+      "actions": {
+        "NG009": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG021": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "P014": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        }
+      }
+    },
+    {
+      "node": "NG021",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 524,
+        "y": 161
+      },
+      "neighbours": [
+        "NG020",
+        "NG022",
+        "NG008"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG021"
+      },
+      "actions": {
+        "NG008": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG020": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG022": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG020",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 621,
+        "y": 163
+      },
+      "neighbours": [
+        "NG019",
+        "NG021"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG020"
+      },
+      "actions": {
+        "NG019": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG021": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG019",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 663,
+        "y": 162
+      },
+      "neighbours": [
+        "NG018",
+        "NG020",
+        "NG007"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG019"
+      },
+      "actions": {
+        "NG007": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG018": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG020": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG018",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 753,
+        "y": 162
+      },
+      "neighbours": [
+        "NG017",
+        "NG019",
+        "NG006"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG018"
+      },
+      "actions": {
+        "NG006": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG017": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG019": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG017",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 793,
+        "y": 164
+      },
+      "neighbours": [
+        "NG016",
+        "NG018",
+        "NG005"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG017"
+      },
+      "actions": {
+        "NG005": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG016": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG018": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG016",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 891,
+        "y": 164
+      },
+      "neighbours": [
+        "NG015",
+        "NG017",
+        "NG004"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG016"
+      },
+      "actions": {
+        "NG004": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG015": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG017": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG015",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 934,
+        "y": 164
+      },
+      "neighbours": [
+        "NG003",
+        "NG016"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG015"
+      },
+      "actions": {
+        "NG003": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG016": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT6",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 257,
+        "y": 187
+      },
+      "neighbours": [
+        "P014",
+        "NGT7"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT6"
+      },
+      "actions": {
+        "NGT7": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "P014": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NGT7",
+      "type": "toilet",
+      "coordinate": {
+        "floor": 0,
+        "x": 258,
+        "y": 269
+      },
+      "neighbours": [
+        "NGT6",
+        "P015"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NGT7"
+      },
+      "actions": {
+        "NGT6": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "P015": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG023",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 168,
+        "y": 228
+      },
+      "neighbours": [
+        "NG013",
+        "NG024"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG023"
+      },
+      "actions": {
+        "NG013": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG024": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG024",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 143,
+        "y": 274
+      },
+      "neighbours": [
+        "NG025",
+        "NG014",
+        "NG023"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG024"
+      },
+      "actions": {
+        "NG014": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG023": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG025": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG025",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 146,
+        "y": 308
+      },
+      "neighbours": [
+        "NG026",
+        "NG024"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG025"
+      },
+      "actions": {
+        "NG024": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG026": {
+          "dir": "left",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn left and walk 6-9 steps"
+        }
+      }
+    },
+    {
+      "node": "NG026",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 151,
+        "y": 402
+      },
+      "neighbours": [
+        "NG027",
+        "NG025",
+        "P015"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG026"
+      },
+      "actions": {
+        "NG025": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG027": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "P015": {
+          "dir": "back",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "go back and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG027",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 154,
+        "y": 449
+      },
+      "neighbours": [
+        "NG028",
+        "NG026",
+        "NG029"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG027"
+      },
+      "actions": {
+        "NG026": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG028": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        },
+        "NG029": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG028",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 162,
+        "y": 541
+      },
+      "neighbours": [
+        "NG031",
+        "NG027",
+        "NG030"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG028"
+      },
+      "actions": {
+        "NG027": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG030": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG031": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG031",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 147,
+        "y": 583
+      },
+      "neighbours": [
+        "NG032",
+        "NG028"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG031"
+      },
+      "actions": {
+        "NG028": {
+          "dir": "back",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "go back and walk 5-8 steps"
+        },
+        "NG032": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG032",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 186,
+        "y": 586
+      },
+      "neighbours": [
+        "NG033",
+        "NG031"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG032"
+      },
+      "actions": {
+        "NG031": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG033": {
+          "dir": "left",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn left and walk 6-9 steps"
+        }
+      }
+    },
+    {
+      "node": "NG033",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 271,
+        "y": 580
+      },
+      "neighbours": [
+        "NG034",
+        "NG032"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG033"
+      },
+      "actions": {
+        "NG032": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG034": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG034",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 312,
+        "y": 574
+      },
+      "neighbours": [
+        "NG035",
+        "NG033"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG034"
+      },
+      "actions": {
+        "NG033": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG035": {
+          "dir": "left",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn left and walk 6-9 steps"
+        }
+      }
+    },
+    {
+      "node": "NG035",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 413,
+        "y": 568
+      },
+      "neighbours": [
+        "NG036",
+        "NG034",
+        "NG052"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG035"
+      },
+      "actions": {
+        "NG034": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG036": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG052": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG036",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 449,
+        "y": 563
+      },
+      "neighbours": [
+        "NG037",
+        "NG035",
+        "NG051"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG036"
+      },
+      "actions": {
+        "NG035": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG037": {
+          "dir": "left",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn left and walk 6-9 steps"
+        },
+        "NG051": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG037",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 554,
+        "y": 554
+      },
+      "neighbours": [
+        "NG038",
+        "NG036",
+        "NG050"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG037"
+      },
+      "actions": {
+        "NG036": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG038": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG050": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG038",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 659,
+        "y": 547
+      },
+      "neighbours": [
+        "NG039",
+        "NG037",
+        "NG048"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG038"
+      },
+      "actions": {
+        "NG037": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG039": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG048": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG039",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 701,
+        "y": 539
+      },
+      "neighbours": [
+        "NG040",
+        "NG038",
+        "NG047"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG039"
+      },
+      "actions": {
+        "NG038": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG040": {
+          "dir": "left",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn left and walk 6-9 steps"
+        },
+        "NG047": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG040",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 800,
+        "y": 535
+      },
+      "neighbours": [
+        "NG041",
+        "NG039",
+        "NG046"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG040"
+      },
+      "actions": {
+        "NG039": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG041": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG046": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG041",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 845,
+        "y": 531
+      },
+      "neighbours": [
+        "NG042",
+        "NG040",
+        "NG045"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG041"
+      },
+      "actions": {
+        "NG040": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG042": {
+          "dir": "left",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn left and walk 6-9 steps"
+        },
+        "NG045": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG042",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 941,
+        "y": 520
+      },
+      "neighbours": [
+        "NG043",
+        "NG041",
+        "NG044"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG042"
+      },
+      "actions": {
+        "NG041": {
+          "dir": "right",
+          "steps": [
+            6,
+            9
+          ],
+          "tts": "turn right and walk 6-9 steps"
+        },
+        "NG043": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        },
+        "NG044": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG043",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 983,
+        "y": 514
+      },
+      "neighbours": [
+        "P013",
+        "NG042"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG043"
+      },
+      "actions": {
+        "NG042": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "P013": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG044",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 913,
+        "y": 500
+      },
+      "neighbours": [
+        "NG042",
+        "NG045"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG044"
+      },
+      "actions": {
+        "NG042": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG045": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG045",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 865,
+        "y": 506
+      },
+      "neighbours": [
+        "NG044",
+        "NG046",
+        "NG041"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG045"
+      },
+      "actions": {
+        "NG041": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG044": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG046": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG046",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 780,
+        "y": 509
+      },
+      "neighbours": [
+        "NG045",
+        "NG047",
+        "NG040"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG046"
+      },
+      "actions": {
+        "NG040": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG045": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG047": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG047",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 740,
+        "y": 515
+      },
+      "neighbours": [
+        "NG046",
+        "NG048",
+        "NG039"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG047"
+      },
+      "actions": {
+        "NG039": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG046": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG048": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG048",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 646,
+        "y": 519
+      },
+      "neighbours": [
+        "NG047",
+        "NG049",
+        "NG038"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG048"
+      },
+      "actions": {
+        "NG038": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG047": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG049": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG049",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 609,
+        "y": 527
+      },
+      "neighbours": [
+        "NG048",
+        "NG050"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG049"
+      },
+      "actions": {
+        "NG048": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG050": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG050",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 512,
+        "y": 531
+      },
+      "neighbours": [
+        "NG049",
+        "NG051",
+        "NG037"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG050"
+      },
+      "actions": {
+        "NG037": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG049": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NG051": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG051",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 468,
+        "y": 536
+      },
+      "neighbours": [
+        "NG050",
+        "NG052",
+        "NG036"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG051"
+      },
+      "actions": {
+        "NG036": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG050": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG052": {
+          "dir": "left",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn left and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG052",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 358,
+        "y": 544
+      },
+      "neighbours": [
+        "NG051",
+        "NG035"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG052"
+      },
+      "actions": {
+        "NG035": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG051": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        }
+      }
+    },
+    {
+      "node": "NG029",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 185,
+        "y": 461
+      },
+      "neighbours": [
+        "NG027",
+        "NG030"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG029"
+      },
+      "actions": {
+        "NG027": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG030": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "NG030",
+      "type": "lecturer_office",
+      "coordinate": {
+        "floor": 0,
+        "x": 187,
+        "y": 511
+      },
+      "neighbours": [
+        "NG028",
+        "NG029"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NG030"
+      },
+      "actions": {
+        "NG028": {
+          "dir": "back",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "go back and walk 3-5 steps"
+        },
+        "NG029": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "stair4_gf",
+      "type": "stair",
+      "coordinate": {
+        "floor": 0,
+        "x": 338,
+        "y": 380
+      },
+      "neighbours": [
+        "P015"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair4_gf"
+      },
+      "actions": {
+        "P015": {
+          "steps": [
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "node": "stair3_gf",
+      "type": "stair",
+      "coordinate": {
+        "floor": 0,
+        "x": 1076,
+        "y": 311
+      },
+      "neighbours": [
+        "PB ATM",
+        "NG001",
+        "P013"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at stair3_gf"
+      },
+      "actions": {
+        "NG001": {
+          "steps": [
+            10,
+            12
+          ]
+        },
+        "P013": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "PB ATM": {
+          "steps": [
+            8,
+            12
+          ]
+        }
+      }
+    },
+    {
+      "node": "P010",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 2410,
+        "y": 241
+      },
+      "neighbours": [
+        "stair1_gf",
+        "N004",
+        "P011"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of stair1"
+      },
+      "actions": {
+        "N004": {
+          "steps": [
+            12,
+            15
+          ]
+        },
+        "P011": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "stair1_gf": {
+          "steps": [
+            3,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "node": "P011",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 2444,
+        "y": 369
+      },
+      "neighbours": [
+        "P010",
+        "N011",
+        "The Olive"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of The Olive"
+      },
+      "actions": {
+        "N011": {
+          "steps": [
+            5,
+            7
+          ]
+        },
+        "P010": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "The Olive": {
+          "steps": [
+            3,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "node": "P012",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 1174,
+        "y": 89
+      },
+      "neighbours": [
+        "NG001"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NG001"
+      },
+      "actions": {
+        "NG001": {
+          "steps": [
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "node": "P013",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 1090,
+        "y": 489
+      },
+      "neighbours": [
+        "stair3_gf",
+        "NG043"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NG043 and N008"
+      },
+      "actions": {
+        "NG043": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "stair3_gf": {
+          "steps": [
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "node": "P014",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 258,
+        "y": 158
+      },
+      "neighbours": [
+        "NG022",
+        "NGT6",
+        "NG012"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NG012 and NGT6"
+      },
+      "actions": {
+        "NG012": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        },
+        "NG022": {
+          "dir": "left",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn left and walk 12-15 steps"
+        },
+        "NGT6": {
+          "dir": "left",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn left and walk 3-5 steps"
+        }
+      }
+    },
+    {
+      "node": "P015",
+      "type": "path",
+      "coordinate": {
+        "floor": 0,
+        "x": 255,
+        "y": 385
+      },
+      "neighbours": [
+        "NGT7",
+        "stair4_gf",
+        "NG026"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at corridor of NG029 and stair4"
+      },
+      "actions": {
+        "NG026": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "NGT7": {
+          "steps": [
+            5,
+            8
+          ]
+        },
+        "stair4_gf": {
+          "steps": [
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "node": "FGO",
+      "type": "FGO",
+      "coordinate": {
+        "floor": 1,
+        "x": 221,
+        "y": 331
+      },
+      "neighbours": [
+        "NF013",
+        "NF023",
+        "NFT7",
+        "NFT6"
+      ],
+      "action": {
+        "label": "current location",
+        "tts": "You are at NF022 (FGO)"
+      },
+      "actions": {
+        "NF013": {
+          "dir": "right",
+          "steps": [
+            12,
+            15
+          ],
+          "tts": "turn right and walk 12-15 steps"
+        },
+        "NF023": {
+          "dir": "left",
+          "steps": [
+            10,
+            12
+          ],
+          "tts": "turn left and walk 10-12 steps"
+        },
+        "NFT6": {
+          "dir": "right",
+          "steps": [
+            5,
+            8
+          ],
+          "tts": "turn right and walk 5-8 steps"
+        },
+        "NFT7": {
+          "dir": "right",
+          "steps": [
+            3,
+            5
+          ],
+          "tts": "turn right and walk 3-5 steps"
+        }
+      }
+    }
+  ]
+}
