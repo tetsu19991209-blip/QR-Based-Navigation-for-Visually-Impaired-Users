@@ -4,12 +4,28 @@ from tkinter import ttk, messagebox, simpledialog
 from PIL import Image, ImageTk, ImageDraw
 
 # ---------- Config paths ----------
-GROUND_PATH = r"C:\Users\User\OneDrive\Desktop\MP code\map\ground_floor.png"
-FIRST_PATH  = r"C:\Users\User\OneDrive\Desktop\MP code\map\first_floor.png"
-JSON_NAME   = "nodes_map.json"
+SCRIPT_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-CURPOS_FILE = os.path.join(SCRIPT_DIR, "current_position.json")  # written by qrReader.py
+GROUND_PATH = os.path.join(
+    SCRIPT_DIR,
+    "map",
+    "ground_floor.png"
+)
+
+FIRST_PATH = os.path.join(
+    SCRIPT_DIR,
+    "map",
+    "first_floor.png"
+)
+
+JSON_NAME = "nodes_map.json"
+
+CURPOS_FILE = os.path.join(
+    SCRIPT_DIR,
+    "current_position.json"
+)
 
 # ---------- Draw constants ----------
 COLOR_BG_EDGE = "#8c8c8c"
