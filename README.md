@@ -54,8 +54,11 @@ f(n) = g(n) + h(n)
 Where:
 
 g(n) is the accumulated travel cost from the starting node.
+
 h(n) is the estimated distance from the current node to the destination.
+
 A floor difference cost is included in the heuristic.
+
 An additional penalty is applied when transitioning between stairs on different floors.
 
 The calculated pixel distance may also be converted into an estimated number of walking steps.
