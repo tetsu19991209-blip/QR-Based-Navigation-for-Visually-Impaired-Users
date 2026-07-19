@@ -116,7 +116,7 @@ Technologies Used
 | NumPy              | Image and coordinate calculations                    |
 | Pillow             | Map and interface image processing                   |
 | A* Search          | Indoor route calculation                             |
-| `heapq`            | Priority queue for A* search                         |
+| heapq            | Priority queue for A* search                         |
 | JSON               | Storage of nodes, coordinates, and application state |
 | pyttsx3            | Text-to-speech navigation                            |
 | SpeechRecognition  | Voice destination input                              |
